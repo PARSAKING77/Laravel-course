@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="meta">
-      <h1>Laravel Course</h1>
+      <h1>Webiste</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam,
         blanditiis saepe dolore facere laborum rem fugit quidem odit suscipit maiores
@@ -11,10 +11,10 @@
     <nav>
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/">Hoem</Link>
         </li>
         <li>
-          <Link href="/posts">Posts</Link>
+          <Link href="/posts">All Posts</Link>
         </li>
       </ul>
     </nav>

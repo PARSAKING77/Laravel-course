@@ -1,36 +1,51 @@
 <template>
-  <footer>
-    <div class="meta">
-      <h1>Laravel Course</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam,
-        blanditiis saepe dolore facere laborum rem fugit quidem odit suscipit maiores
-        voluptatum quo eius quod non obcaecati, est accusantium a?
-      </p>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/posts">Posts</Link>
-        </li>
-      </ul>
-    </nav>
-  </footer>
+    <header >
+        <div>
+            <h1>Webiste</h1>
+            <button @click="onToggle()">
+                <IconNav class="w-8 h-8 fill-slate-700" />
+            </button>
+        </div>
+        <nav :class="[{'close': !isOpen}]">
+            <ul>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/posts">All Posts</Link>
+                </li>
+            </ul>
+        </nav>
+    </header>
 </template>
-<style scoped>
-footer {
-  @apply bg-slate-900 text-gray-100 flex flex-col md:flex-row md:justify-between gap-8 p-8;
+
+<script setup>
+const isOpen = ref(false)
+function onToggle() {
+    isOpen.value = !isOpen.value
 }
-footer h1 {
-  @apply text-xl;
+</script>
+
+<style  scoped>
+header {
+    @apply flex flex-col md:flex-row md:justify-between
 }
-footer .meta {
-  @apply w-full md:w-1/3;
+header > div {
+    @apply flex flex-row justify-between
 }
-footer nav {
-  @apply w-full md:w-2/3;
+header h1 {
+    @apply text-3xl font-bold p-5
+}
+header button {
+    @apply md:hidden
+}
+nav {
+    @apply flex flex-col gap-4 bg-slate-900 text-white p-5 md:grow
+}
+nav ul {
+    @apply md:flex md:flex-row md:gap-4
+}
+nav.close {
+    @apply hidden md:block
 }
 </style>

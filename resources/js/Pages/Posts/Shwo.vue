@@ -2,7 +2,9 @@
   <div class="grid grid-cols-1 gap-4">
     <h1 class="font-bold">{{ post.title }}</h1>
     <p>{{ post.content }}</p>
-    <Link href="/posts">Back to Posts</Link>
+    <ui-comment-list :comments="post.comments" />
+    <form-comment :post="post" />
+    <Link href="/posts">Back To Posts List</Link>
   </div>
 </template>
 
