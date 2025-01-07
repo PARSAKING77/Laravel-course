@@ -10,24 +10,22 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-{
-    if (!Schema::hasTable('posts')) {
-        Schema::create('posts', function (Blueprint $table) {
+    {
+        Schema::create('metas', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->text("description");
-            $table->string("slug")->unique();
-            $table->longText("content");
+            $table->morphs('metaable');
+            $table->string('title');
+            $table->text('description');
+            $table->string('keywords');
             $table->timestamps();
         });
     }
-}
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('metas');
     }
 };

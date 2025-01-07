@@ -6,11 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
+
             if (!Schema::hasColumn('users', 'mobile')) {
-                $table->char('mobile', 255)->nullable();
+                $table->char('mobile')->nullable();
             }
 
             if (!Schema::hasColumn('users', 'is_verified_mobile')) {
@@ -19,12 +23,17 @@ return new class extends Migration
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
+            // Drop the 'mobile' column if it exists
             if (Schema::hasColumn('users', 'mobile')) {
                 $table->dropColumn('mobile');
             }
+
             if (Schema::hasColumn('users', 'is_verified_mobile')) {
                 $table->dropColumn('is_verified_mobile');
             }

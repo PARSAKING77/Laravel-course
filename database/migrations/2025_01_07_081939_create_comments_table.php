@@ -6,10 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-   
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        if (!Schema::hasTable('pages')) {
+        // Check if the 'comments' table does not exist before creating it
+        if (!Schema::hasTable('comments')) {
             Schema::create('comments', function (Blueprint $table) {
                 $table->id();
                 $table->text("body");
@@ -18,9 +21,15 @@ return new class extends Migration
             });
         }
     }
-    
+
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        // Drop the 'comments' table if it exists
+        if (Schema::hasTable('comments')) {
+            Schema::dropIfExists('comments');
+        }
     }
 };
