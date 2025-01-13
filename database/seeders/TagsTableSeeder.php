@@ -8,29 +8,28 @@ use Illuminate\Database\Seeder;
 
 class TagsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $faker = Factory::create();
 
-        // Predefined tags
-        $tags = ['Technology', 'Laravel', 'PHP'];
+        $tags = [
+            'Technology',
+            'Laravel',
+            'PHP',
+        ];
 
-        // Add predefined tags
-        foreach ($tags as $tag) {
-            Tag::create(['name' => $tag]);
-        }
-
-        // Generate 10 more unique tags
-        for ($i = 0; $i < 10; $i++) {
+        // Create predefined tags
+        foreach ($tags as $tagName) {
             Tag::create([
-                'name' => $faker->unique()->word,
+                'name' => $tagName,
             ]);
         }
 
-        // Reset unique state after seeding
-        $faker->unique(true);
+        // Generate 10 more tags randomly
+        for ($i = 0; $i < 10; $i++) {
+            Tag::create([
+                'name' => $faker->word,
+            ]);
+        }
     }
 }

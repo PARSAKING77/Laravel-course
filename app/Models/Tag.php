@@ -11,12 +11,6 @@ class Tag extends Model
 
     protected $fillable = ['name'];
 
-
-    public function taggable()
-    {
-        return $this->morphTo();
-    }
-
     public function posts()
     {
         return $this->morphedByMany(Post::class, 'taggable');

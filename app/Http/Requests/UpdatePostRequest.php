@@ -32,9 +32,9 @@ class UpdatePostRequest extends FormRequest
     public function messages()
     {
         return [
-            "title.required" => 'Title',
-            "content.required" => 'Content',
-            "slug.unique" => 'Slug'
+            "title.required" => 'Add the title',
+            "content.required" => 'Add the content',
+            "slug.unique" => 'This slug used ny anthore user'
         ];
     }
 }
