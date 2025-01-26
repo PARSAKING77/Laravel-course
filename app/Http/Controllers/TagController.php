@@ -42,7 +42,7 @@ class TagController extends Controller
 
         } catch(\Exception $e) {
             return redirect("/tags/datagrid")->withErrors([
-                "error" => "Error in registering Tag"
+                "error" => "خطا در ثبت تگ"
             ]);
         }
         return redirect("/tags/datagrid");

@@ -16,11 +16,12 @@ class CommentFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-    {
-        return [
-            'body' => $this->faker->paragraph,
-            'email' => $this->faker->email,
-            'status' => $this->faker->randomElement(['approved', 'unapproved', null]),
-        ];
-    }
+{
+    return [
+        'body' => fake()->text(200),
+        'email' => fake()->safeEmail,
+        'status' => fake()->randomElement(['approved', 'unapproved', null]),
+    ];
+}
+
 }

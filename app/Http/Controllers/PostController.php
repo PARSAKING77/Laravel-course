@@ -25,12 +25,11 @@ class PostController extends Controller
         $this->postService = $postService;
     }
 
-    //
     public function index(): Response
-    {
-        $posts = $this->postService->getAllPost();
-        return Inertia::render("Posts/Index", compact("posts"));
-    }
+{
+    $posts = $this->postService->getAllPost();
+    return Inertia::render("Posts/Index", compact("posts"));
+}
 
     public function show(Request $request, $id, $slug = null): Response
     {
@@ -151,11 +150,11 @@ class PostController extends Controller
             $post->tags()->sync($tagIds);
         } catch (\Exception $e) {
             return redirect()->back()->withErrors([
-                'error' => 'Error in saving the Post'
+                'error' => 'مشکل در ذخیره پست'
             ]);
         }
 
-        return redirect("/posts")->with("success", "Post saved Successfully");
+        return redirect("/posts")->with("success", "پست با موفقیت ذخیره شد");
     }
 
     public function edit(Post $post)
@@ -174,7 +173,7 @@ class PostController extends Controller
             Redis::setex("post:{$post->id}", 3600, json_encode($post));
         } catch (\Exception $e) {
             return redirect()->back()->withErrors([
-                'error' => 'Error in editing Post'
+                'error' => 'مشکل در ویرایش پست'
             ]);
         }
     }

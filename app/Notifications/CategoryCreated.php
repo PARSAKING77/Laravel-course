@@ -33,7 +33,7 @@ class CategoryCreated extends Notification
     public function toTelegram($notifiable)
     {
         return TelegramMessage::create()
-            ->content("A new category `{$notifiable->name}` Added!")
+            ->content("یک دسته جدید به نام `{$notifiable->name}` ساخته شد!")
             ->parseMode("Markdown")
             ->to(env('TELEGRAM_CHAT_ID'));
     }

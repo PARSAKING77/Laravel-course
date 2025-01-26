@@ -29,9 +29,9 @@ class CategoryController extends Controller
         try {
             $category->save();
         } catch(\Exception $e) {
-            redirect("/categories")->withErrors("Error");
+            redirect("/categories")->withErrors("ERROR");
         }
         $category->notify(new CategoryCreated());
-        redirect('/categories')->with("success", "Added Successfully");
+        redirect('/categories')->with("success", "Added successfully!");
     }
 }

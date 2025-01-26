@@ -1,9 +1,9 @@
 <template>
   <div>
-    <button class="new" v-if="!isOpenNewCategory" @click="openNewCategory">New Category</button>
+    <button class="new" v-if="!isOpenNewCategory" @click="openNewCategory">دسته جدید</button>
     <div v-if="isOpenNewCategory" class="newCategory">
       <ui-input v-model="form.name" />
-      <button @click="submitForm">Add</button>
+      <button @click="submitForm">اضافه کن</button>
     </div>
     <ui-category-item :category="category" v-for="category in categories" />
   </div>

@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <small v-if="isTyping">{{ user.name }} Is Typing...</small>
+      <small v-if="isTyping">{{ user.name }} Is Writing ...</small>
     </section>
     <footer>
       <input

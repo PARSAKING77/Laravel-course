@@ -1,7 +1,7 @@
 <template>
     <div>
         <input v-model="form.otp" />
-        <button @click="submit" >Send</button>
+        <button @click="submit" >ارسال</button>
     </div>
 </template>
 

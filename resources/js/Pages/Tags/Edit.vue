@@ -1,8 +1,8 @@
 <template>
   <div class="p-10">
     <form @submit.prevent="form.put('/tags/' + tag.id)" class="grid grid-cols-1 gap-8">
-      <ui-input label="Tilte of Tag" :error="form.errors.name" v-model="form.name" />
-      <button class="btn" type="submit">ارسال</button>
+      <ui-input label="Title of Tag" :error="form.errors.name" v-model="form.name" />
+      <button class="btn" type="submit">Send</button>
     </form>
   </div>
 </template>

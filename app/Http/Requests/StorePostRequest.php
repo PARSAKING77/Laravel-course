@@ -33,9 +33,9 @@ class StorePostRequest extends FormRequest
     public function messages()
     {
         return [
-            "title.required" => 'Add the Title',
-            "content.required" => 'Add the content',
-            "slug.unique" => 'This slug used by anthore user',
+            "title.required" => 'لطفا عنوان پست را وارد کنید',
+            "content.required" => 'لطفا متن پست را وارد کنید',
+            "slug.unique" => 'این نامک قبلا استفاده شده است',
 
         ];
     }

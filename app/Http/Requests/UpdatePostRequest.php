@@ -32,9 +32,9 @@ class UpdatePostRequest extends FormRequest
     public function messages()
     {
         return [
-            "title.required" => 'Add the title',
-            "content.required" => 'Add the content',
-            "slug.unique" => 'This slug used ny anthore user'
+            "title.required" => 'لطفا عنوان پست را وارد کنید',
+            "content.required" => 'لطفا متن پست را وارد کنید',
+            "slug.unique" => 'این نامک قبلا استفاده شده است'
         ];
     }
 }

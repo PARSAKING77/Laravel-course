@@ -51,16 +51,10 @@ class ProfileController extends Controller
 
         $user = $request->user();
 
-        // Delete related categories
-        $user->categories()->delete();
-
-        // Log out the user
         Auth::logout();
 
-        // Delete the user account
         $user->delete();
 
-        // Invalidate the session
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

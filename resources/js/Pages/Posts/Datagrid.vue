@@ -14,7 +14,7 @@ const props = defineProps({
 })
 
 const options = reactive({
-    title: "List of Posts",
+    title: "Posts",
     columns: {
         title: "Title",
         comments_no: "Comments",
@@ -22,7 +22,7 @@ const options = reactive({
     },
     actions: {
         edit: {
-            title: "Edit",
+            title: "ویرایش",
             route: "posts.edit"
         }
     },

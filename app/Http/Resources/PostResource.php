@@ -19,9 +19,9 @@ class PostResource extends JsonResource
             "title" => $this->title,
             "description" => $this->description,
             "publish_date" => jdate($this->created_at)->format("Y-m-d H:i"),
-            "author" => new UserResource($this->author)  ,
+            "author" => $this->whenLoaded("author", new UserResource($this->author)),
             "comments_no" => $this->comments->count(),
-            "comments" => CommentCollection::collection($this->comments)
+            "comments" => $this->whenLoaded("comments", new CommentCollection($this->comments))
         ];
     }
 }

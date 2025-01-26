@@ -13,9 +13,9 @@ const props = defineProps({
 });
 
 const options = reactive({
-  title: "List of Tags",
+  title: "Tags",
   columns: {
-    "name": "Title",
+    "name": "Tilte",
   },
   actions: {
     edit: {

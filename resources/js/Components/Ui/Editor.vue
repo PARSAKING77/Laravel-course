@@ -232,7 +232,7 @@
           :class="{
             error: error,
           }"
-          placeholder="Note ..."
+          placeholder="متن ..."
         ></textarea>
       </div>
     </div>

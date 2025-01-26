@@ -1,7 +1,7 @@
 <template>
     <div>
         <input v-model="form.mobile" keyup.enter="submit" :class="{ 'valid': validPhone }" autofocus />
-        <button :disabled="!validPhone" @click="submit">Log In</button>
+        <button :disabled="!validPhone" @click="submit">ورود</button>
     </div>
 </template>
 

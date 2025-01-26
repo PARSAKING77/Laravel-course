@@ -8,6 +8,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -64,8 +66,8 @@ Route::get("/page/{id}", [PageController::class, "show"]);
 // Page Admin
 Route::get("/posts/create", [PostController::class, "create"])
     ->middleware("auth");
-Route::post("/posts", [PostController::class, "store"])
-    ->middleware("auth");
+Route::get("/posts", [PostController::class, "index"]);
+
 Route::get("/posts/edit/{post}", [PostController::class, "edit"])
     ->middleware("auth")
     ->name("posts.edit");
@@ -113,4 +115,7 @@ Route::middleware("guest")->group(
     }
 );
 
+Route::get("/users/{user}/posts/{post}", function(User $user, Post $post) {
+    return $post;
+})->scopeBindings();
 require __DIR__ . '/auth.php';

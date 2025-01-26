@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasTable('metas')) {
-            Schema::create('metas', function (Blueprint $table) {
-                $table->id();
-                $table->morphs('metaable');
-                $table->string('title');
-                $table->text('description');
-                $table->string('keywords');
-                $table->timestamps();
-            });
-        }
+        Schema::create('metas', function (Blueprint $table) {
+            $table->id();
+            $table->morphs('metaable');
+            $table->string('title');
+            $table->text('description');
+            $table->string('keywords');
+            $table->timestamps();
+        });
     }
 
     /**

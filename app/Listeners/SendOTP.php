@@ -25,7 +25,7 @@ class SendOTP
     public function handle(OTPGenerated $event): void
     {
         //
-        $message = "Verification code? : {$event->otp->code}";
+        $message = "کد تایید شما : {$event->otp->code}";
         $response = $this->smsService->send($event->user->mobile, $message);
     }
 }

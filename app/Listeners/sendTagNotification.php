@@ -23,6 +23,6 @@ class sendTagNotification
     public function handle(TagCreated $event): void
     {
         //
-        Log::channel("single")->info("New tag added : ". $event->tag->name);
+        Log::channel("single")->info("برچسب جدید اضافه شد : ". $event->tag->name);
     }
 }

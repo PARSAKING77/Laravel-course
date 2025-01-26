@@ -7,21 +7,21 @@
           v-if="data.status == 'approved'"
           class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
         >
-          Approved
+          Accpeted
         </button>
         <button
           @click="changeStatus(data)"
           v-else-if="data.status == 'unapproved'"
           class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300"
         >
-          Approved
+          Rejected
         </button>
         <button
           @click="changeStatus(data)"
           v-else="data.status == ''"
           class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
         >
-          Unkown
+          Unknown
         </button>
       </template>
     </UiDatagrid>
@@ -55,10 +55,10 @@ function changeStatus(data) {
 }
 
 const options = reactive({
-  title: "List of Comments",
+  title: "Comments",
   columns: {
     email: "Auther",
-    body: "Content od Message",
+    body: "Note",
     status: "Status",
   },
   actions: {

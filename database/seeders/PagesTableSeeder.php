@@ -4,12 +4,17 @@ namespace Database\Seeders;
 
 use App\Models\Page;
 use Faker\Factory;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class PagesTableSeeder extends Seeder
 {
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
+        //
         $faker = Factory::create();
 
         Page::create([

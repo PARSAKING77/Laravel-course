@@ -1,7 +1,7 @@
 <template>
   <aside class="aside">
     <div class="aside-content">
-      <h2 class="aside-title">Top Posts by View</h2>
+      <h2 class="aside-title">Posts by view</h2>
       <ul class="aside-links ">
         <li v-for="post in topPostsByViews" :key="post.id">
           <Link :href="`/post/${post.id}/${post.slug}`" class="aside-link group">
@@ -10,7 +10,7 @@
         </li>
       </ul>
 
-      <h2 class="aside-title">Top Post by Like</h2>
+      <h2 class="aside-title">Posts by likes</h2>
       <ul class="aside-links ">
         <li v-for="post in topPostsByLikes" :key="post.id">
           <ui-link :href="`/post/${post.id}/${post.slug}`" class="aside-link group">
@@ -36,7 +36,7 @@ const fetchTopPosts = async () => {
     topPostsByLikes.value = response.data.topPostsByLikes;
     console.log(response)
   } catch (error) {
-    console.error("Error in loading Post:", error);
+    console.error("Error in getting posts:", error);
   }
 };
 

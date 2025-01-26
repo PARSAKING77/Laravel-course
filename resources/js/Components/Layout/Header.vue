@@ -1,7 +1,7 @@
 <template>
     <header >
         <div>
-            <h1>Webiste</h1>
+            <h1>مگ مگ</h1>
             <button @click="onToggle()">
                 <IconNav class="w-8 h-8 fill-slate-700" />
             </button>
@@ -9,7 +9,7 @@
         <nav :class="[{'close': !isOpen}]">
             <ul>
                 <li>
-                    <Link href="/">Hoem</Link>
+                    <Link href="/">Home</Link>
                 </li>
                 <li>
                     <Link href="/posts">Posts</Link>

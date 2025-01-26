@@ -1,10 +1,11 @@
 <template>
   <footer>
     <div class="meta">
-      <h1>Website</h1>
+      <h1>مگ مگ</h1>
       <p>
-        Under the golden glow of the setting sun,
-        the gentle hum of the cicadas became the melody of the evening.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam,
+        blanditiis saepe dolore facere laborum rem fugit quidem odit suscipit maiores
+        voluptatum quo eius quod non obcaecati, est accusantium a?
       </p>
     </div>
     <nav>

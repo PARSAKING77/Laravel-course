@@ -27,7 +27,7 @@
           type="text"
           v-model="filter"
           id="table-search"
-          class="block pt-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-black-500 focus:border-black-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-black-500 dark:focus:border-blue-500"
+          class="block pt-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search for items"
         />
       </div>
@@ -131,14 +131,14 @@
             d="M13 5H1m0 0 4 4M1 5l4-4"
           />
         </svg>
-        Previous
+        قبلی
       </Link>
       <Link
         :href="data.links.next"
         v-if="data.links.next"
         class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
       >
-        Next
+        بعدی
         <svg
           class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
           aria-hidden="true"

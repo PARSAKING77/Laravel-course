@@ -87,12 +87,12 @@ button:focus {
   @apply outline-none ring-2 ring-offset-2 ring-gray-400;
 }
 
-/* Style of Content */
+/* Style of content */
 p {
   @apply text-lg leading-relaxed text-gray-800 mt-4;
 }
 
-/* Style of Tag */
+/* Style of Tags */
 ul {
   @apply flex flex-wrap gap-3 mt-5;
 }
@@ -109,7 +109,7 @@ a {
   @apply text-blue-600 font-medium hover:underline transition-colors duration-200;
 }
 
-/* Style of Comment */
+/* Style of Comments */
 ui-comment-list {
   @apply mt-8 border-t border-gray-200 pt-6;
 }
@@ -118,12 +118,12 @@ form-comment {
   @apply mt-6 p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-200;
 }
 
-/* Back Link */
+/* Back */
 a[href="/posts"] {
   @apply text-sm text-gray-600 hover:text-gray-800 mt-6 inline-block transition-colors duration-200 ease-in-out;
 }
 
-/* Style of responsive Status */
+/* Style for status of Responsive */
 @media (min-width: 768px) {
   h1 {
     @apply text-4xl;

@@ -21,7 +21,7 @@
           />
         </svg>
         <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-          <span class="font-semibold">For uploading click here</span> Drag
+          <span class="font-semibold">Upload</span> Drag
           Here
         </p>
       </div>

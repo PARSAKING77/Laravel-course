@@ -3,7 +3,7 @@
         <form @submit.prevent="form.put('/posts/'+post.id)">
             <ui-input label="Title" :error="form.errors.title" v-model="form.title" />
             <ui-input label="Slug" :error="form.errors.slug" v-model="form.slug" />
-            <ui-textarea label="Descreption" :error="form.errors.description" v-model="form.description" />
+            <ui-textarea label="Descirption" :error="form.errors.description" v-model="form.description" />
             <ui-editor label="Note" :error="form.errors.content" v-model="form.content" />
             <button class="btn" type="submit">Send</button>
         </form>

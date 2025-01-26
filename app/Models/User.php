@@ -6,7 +6,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable
 {
@@ -46,14 +45,6 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * Define a one-to-many relationship with the Category model.
-     */
-    public function categories(): HasMany
-    {
-        return $this->hasMany(Category::class);
-    }
-
     public function latestComment()
     {
         return $this->hasOneThrough(Comment::class, Post::class)->latest();
@@ -66,11 +57,11 @@ class User extends Authenticatable
 
     public function comments()
     {
+        // return $this->hasManyThrough(Comment::class, Post::class);
         return $this->throughPosts()->hasComments();
     }
 
-    public function otps()
-    {
+    public function otps() {
         return $this->hasMany(OTP::class);
     }
 }
